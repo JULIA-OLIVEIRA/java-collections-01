@@ -14,13 +14,32 @@ public class Main {
 	}
 	
 	private Scanner scanner = new Scanner(System.in);
+	
+	private final String VALOR_INVALIDO = "VALOR INVALIDO";
 
 	private void start() {
 		
 		List<String> lista = new ArrayList<String>();
 		
-		String valorRecebido = obterDados();
-		System.out.println("o valor recebido foi: " + valorRecebido);
+		
+		while(lista.size() < 5) {
+			
+			String valorRecebido = obterDados();
+			// System.out.println("o valor recebido foi: " + valorRecebido);
+			if(valorRecebido.isEmpty()
+				||valorRecebido.contentEquals(VALOR_INVALIDO)){
+				System.out.println("este valor foi descartado");
+		
+			}else {
+				lista.add(valorRecebido);
+			}
+			lista.add(valorRecebido);
+			
+		}
+		
+		for(String item: lista) {
+			System.out.println("o item da lista é: " + item);
+		}
 	}
 	
 	private String obterDados() {
