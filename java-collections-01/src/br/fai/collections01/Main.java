@@ -25,9 +25,9 @@ public class Main {
 		while(lista.size() < 5) {
 			
 			String valorRecebido = obterDados();
-			// System.out.println("o valor recebido foi: " + valorRecebido);
+			
 			if(valorRecebido.isEmpty()
-				||valorRecebido.contentEquals(VALOR_INVALIDO)){
+				||valorRecebido.equals(VALOR_INVALIDO)){
 				System.out.println("este valor foi descartado");
 		
 			}else {
@@ -40,6 +40,17 @@ public class Main {
 		for(String item: lista) {
 			System.out.println("o item da lista é: " + item);
 		}
+		
+		lista.add("item adicionado automaticamento 01");
+		lista.add("item adicionado automaticamento 02");
+		
+		lista.remove(1);
+		// lista.remove(1);
+		
+		for(String item: lista) {
+			System.out.println("novos valores: " + item);
+		}
+		
 	}
 	
 	private String obterDados() {
