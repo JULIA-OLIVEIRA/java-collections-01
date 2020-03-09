@@ -24,11 +24,19 @@ public class Main {
 	}
 	
 	private String obterDados() {
+		try {
+			System.out.println("digite o valor: ");
+			int valor = scanner.nextInt();
+			
+			return String.valueOf(valor);
+			
+		} catch(Exception e) {
+			scanner.next();
+			System.out.println("um valor invalido foi digitado");
+			return "valor invalido";
+		}
 		
-		System.out.println("digite o valor: ");
 		
-		int valor = scanner.nextInt();
-		return String.valueOf(valor);
 		
 	}
 }
